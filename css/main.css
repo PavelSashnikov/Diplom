@@ -3,14 +3,41 @@ body{
 	font-size: 16px;
     line-height: 1;
 }
+.wrapper {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+}
 a {
     font-size: 20px;
 }
+ 
+
+/* 
+*                
+*               
+*              Header 
+*
+*
+*/
 header {
     padding: 10px;
 }
+.header__top {
+    margin-bottom: 10px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.search {
+    border: 1px solid grey;
+    align-items: center;
+    display: flex;
+}
 header img {
     vertical-align: middle;
+    margin-left: -9px;
 }
 header input {
     line-height: 50px;
@@ -36,10 +63,18 @@ header a:hover, .main a:hover {
     background-color: rgb(230, 230, 230);
     color: black;
 }
+
+
+/* 
+*
+*
+*
+*           main
+*
+*
+* */
 .main {
-    margin:0 auto;
     display: flex;
-    width: 1100px;
 }
 .main nav ul {
     background-color: rgb(58, 58, 58);

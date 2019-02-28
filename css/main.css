@@ -6,7 +6,8 @@
 body{
     background: #171717;
     color: #fff;
-    font-size: 16px;
+    font-size: 18px;
+    font-family: 'Cuprum', serif;
 }
 .wrapper {
     width: 1225px;
@@ -22,6 +23,39 @@ a {
     content: '';
     clear: both;
 }
+.selected {
+    color: #fcd041;
+}
+.icon::before {
+    color: #fcd041;
+    font-family: 'FontAwesome';
+}
+.layout {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.hidden {
+    opacity: 0;
+    display: none;
+    transition: opacity 1s ease-in;
+}
+.inner {
+    position: absolute;
+    top: 42px;
+    left: 0;
+    padding-right: 30px;
+    border: none;
+    background: #171717;
+}
+.dropdown > a::after {
+    content: ' \f077';
+    font-family: 'FontAwesome';
+    font-size: 0.8rem;
+    vertical-align: 3px;
+    margin-left: 2px;
+    display: inline-block;
+    transition-duration: 0.3s;
+}
 /*
 *
 *       HEADER
@@ -33,7 +67,7 @@ header .top{
 header .top nav {
     float: left;
     line-height: 36px;
-    margin-left: 10px;
+    /* margin-left: 20px; */
 }
 header .top nav ul li {
     display: inline;
@@ -42,5 +76,81 @@ header .top nav ul li {
 header .cart {
     float: right;
     line-height: 36px;
-    margin-right: 10px;
+    /* margin-right: 20px; */
+}
+header .cart.icon::before {
+  content:'\f07a';
+}
+header .main {
+    padding: 30px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .icon.mail::before {
+    content: '\f0e0';
+}
+header .icon.phone::before {
+    content: '\f095';
+}
+header .icon.search::before {
+    content: '\f002';
+}
+header .contacts p {
+    margin-top: 16px;
+}
+header .contacts p:first-of-type {
+    margin-top: 0;
+}
+header .seek {
+    border: 1px solid #fff;
+    width: 200px;
+    line-height: 26px;
+    padding-left: 10px;
+}
+header .seek input, header .seek button {
+    background: transparent;
+    border: none;
+}
+.menu nav > ul {
+    text-align: center;
+    border-bottom: 2px solid #fff;
+    border-top: 2px solid #fff;
+}
+.menu ul li {
+    position: relative;
+    display: inline-block;
+    padding: 0 10px;
+    text-transform: uppercase;
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+li:hover ul,
+li:hover ul li {
+    display: block;
+    z-index: 2;
+}
+li:hover a::after {
+    transform: rotate(180deg);
+}
+/*
+*
+*
+*               SECTION
+*
+*
+*/
+.slider__inner {
+    margin-top: 20px;
+    overflow: hidden;
+    height: 450px;
+    position: relative;
+}
+.slider__inner img {
+    width: 100%;
+    opacity: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
 }

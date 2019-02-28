@@ -18,6 +18,10 @@ a {
     color: #fff;
     text-decoration: none;
 }
+input {
+    outline: none;
+    color: #fff;
+}
 .clearfix:after {
     display: table;
     content: '';
@@ -35,13 +39,11 @@ a {
     padding-right: 20px;
 }
 .hidden {
-    opacity: 0;
     display: none;
-    transition: opacity 1s ease-in;
 }
 .inner {
     position: absolute;
-    top: 42px;
+    top: 32px;
     left: 0;
     padding-right: 30px;
     border: none;
@@ -153,4 +155,38 @@ li:hover a::after {
     position: absolute;
     left: 0;
     top: 0;
+}
+.advantages {
+    font-size: 20px;
+    margin-top: 48px;
+}
+.advantages__blocks {
+    border-top: 2px solid #fff;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-transform: uppercase;
+    padding-top: 48px;
+    padding-bottom: 58px;
+    margin-top: 15px;
+    line-height: 2.5rem;
+}
+.advantages__blocks img {
+    width: 50px;
+    height: 50px;
+}
+.supplies{
+    font-size: 20px;
+}
+.supplies a {
+    margin-right: 20px;
+}
+.supplies__blocks {
+    border-top: 2px solid #fff;
+    margin-top: 15px;
+    padding-top: 48px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }

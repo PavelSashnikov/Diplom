@@ -24,14 +24,24 @@ function fetchData() {
     return new Promise((resolve, regect) => {
         resolve([
             {
-                title: 'test',
-                image: 'https://img.tyt.by/552x368c/n/zamirovskiy/03/a/27_ukraina_avtokefaliya_26022019_zam_tutby_phsl.jpg',
+                title: 'Joytech eGo AIO 1500mAh Black-White',
+                image: 'img/ego_AIO.jpg',
                 price: 123
             },
             {
-                title: 'test2',
-                image: 'https://img.tyt.by/552x368c/n/zamirovskiy/03/a/27_ukraina_avtokefaliya_26022019_zam_tutby_phsl.jpg',
+                title: 'Жидкость milk cream green',
+                image: 'img/milk_cream_green.jpg',
                 price: 345
+            },
+            {
+                title: 'Жидкость mr. Blintz',
+                image: 'img/mr_blintz.jpg',
+                price: 678
+            },
+            {
+                title: 'Жидкость old school tea fresh',
+                image: 'img/tea_time.jpg',
+                price: 234
             }
         ])
     })
@@ -56,7 +66,7 @@ function renderProducts(products) {
         const image = document.createElement('img');
         image.setAttribute('src', product.image);
         const price = document.createElement('span');
-        price.innerText = `${product.price}руб.`
+        price.innerText = `${product.price} руб.`
         const title = document.createElement('p');
         title.innerText = product.title;
 

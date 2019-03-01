@@ -89,16 +89,16 @@ header .main {
     justify-content: space-between;
     align-items: center;
 }
-header .icon.mail::before {
+.icon.mail::before {
     content: '\f0e0';
 }
-header .icon.phone::before {
+.icon.phone::before {
     content: '\f095';
 }
 header .icon.search::before {
     content: '\f002';
 }
-header .contacts p {
+.contacts p {
     margin-top: 16px;
 }
 header .contacts p:first-of-type {
@@ -189,4 +189,58 @@ li:hover a::after {
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+.products {
+    display: flex;
+    justify-content: space-between;
+}
+.product {
+    position: relative;
+}
+.product span {
+    position: absolute;
+    left: 0;
+    bottom: 60px;
+    line-height: 1.5rem;
+    background-color: #101010;
+    padding: 0 5px;
+}
+.product img, .product p {
+    width: 260px;
+    text-align: center;
+}
+.product p {
+    margin-top: 20px;
+}
+.about p:first-of-type {
+    font-size: 25px;
+    margin-top: 48px;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+.about .image {
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+.about p {
+    margin-bottom: 15px;
+}
+.about p span {
+    color: #fcd041;
+}
+/*
+*
+*                   FOOTER
+*
+*/
+footer {
+    background-color: #101010;
+}
+footer nav {
+    float: left;
+    line-height: 2rem;
+}
+footer .contacts {
+    float: right;
 }

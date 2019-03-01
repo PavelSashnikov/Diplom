@@ -17,6 +17,11 @@ body{
 a {
     color: #fff;
     text-decoration: none;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+a:hover {
+    color: #c0c0c0;
 }
 input {
     outline: none;
@@ -40,6 +45,9 @@ input {
 }
 .hidden {
     display: none;
+}
+.hide {
+    opacity: 0;
 }
 .inner {
     position: absolute;
@@ -151,7 +159,7 @@ li:hover a::after {
 }
 .slider__inner img {
     width: 100%;
-    opacity: 1;
+    /* opacity: 1; */
     position: absolute;
     left: 0;
     top: 0;
@@ -190,7 +198,7 @@ li:hover a::after {
     justify-content: space-around;
     align-items: center;
 }
-.products {
+.products>div{
     display: flex;
     justify-content: space-between;
 }

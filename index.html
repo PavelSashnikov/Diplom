@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Title</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/fonts.css">
@@ -12,13 +13,15 @@
     <script src="https://unpkg.com/react@16/umd/react.development.js"></script>  <!-- -->
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 </head>
 
 <body>
     <div class="wrapper">
         <header class="">
             <div class="top clearfix layout">
-                <nav>
+                <nav class="icon">
+                        <div class="icon"></div>
                     <ul>
                         <li><a href="#" class="selected">Доставка</a></li>
                         <li><a href="#">Оплата</a></li>
@@ -67,8 +70,8 @@
             <div class="slider layout">
                 <div class="slider__inner">
                     <img src="img/promo_slide_1.jpg" alt="promo">
-                    <img src="img/promo_slide_2.jpg" class="hide" alt="promo">
-                    <img src="img/promo_slide_3.jpg" class="hide" alt="promo">
+                    <img src="img/promo_slide_2.jpg" class="" alt="promo">
+                    <img src="img/promo_slide_3.jpg" class="" alt="promo">
                 </div>
             </div>
             <div class="advantages layout">
@@ -125,6 +128,7 @@
     </footer>
     <div class="root"></div>
     </div>
+    <script src="script/plugin.js"></script>
     <script src="script/main.js"></script>
     <script type="text/babel">
 

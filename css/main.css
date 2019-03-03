@@ -14,13 +14,14 @@ body{
     margin: 0 auto;
     background-color: #262626;
 }
-a {
+a, .product {
+    cursor: pointer;
     color: #fff;
     text-decoration: none;
     -webkit-transition-duration: 0.5s;
     transition-duration: 0.5s;
 }
-a:hover {
+a:hover, .product:hover {
     color: #c0c0c0;
 }
 input {

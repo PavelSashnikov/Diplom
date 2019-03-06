@@ -23,7 +23,7 @@
                 <nav class="icon">
                         <div class="icon"></div>
                     <ul>
-                        <li><a href="#" class="selected">Доставка</a></li>
+                        <li><a href="#">Доставка</a></li>
                         <li><a href="#">Оплата</a></li>
                         <li><a href="#">О компании</a></li>
                         <li><a href="#">Контакты</a></li>
@@ -92,8 +92,8 @@
                 </div>
             </div>
             <div class="supplies layout">
-                <a href="#" onclick="getNew()">Новинки</a>
-                <a href="#" onclick="pop()">Популярные товары</a>
+                <a href="" onClick="getNew(event)">Новинки</a>
+                <a href="" onClick="pop(event)">Популярные товары</a>
                 <div class="supplies__blocks"></div>
             </div>
             <div class="products layout"></div>
@@ -110,11 +110,11 @@
         <footer class="layout clearfix">
             <nav>
                 <ul>
-                    <li><a href="#" class="selected">Доставка</a></li>
-                    <li><a href="#">Оплата</a></li>
-                    <li><a href="#">О компании</a></li>
-                    <li><a href="#">Контакты</a></li>
-                    <li><a href="#">Каталог</a></li>
+                    <li><a href="">Доставка</a></li>
+                    <li><a href="">Оплата</a></li>
+                    <li><a href="">О компании</a></li>
+                    <li><a href="">Контакты</a></li>
+                    <li><a href="">Каталог</a></li>
                 </ul>
             </nav>
             <div class="contacts">
@@ -214,13 +214,15 @@
             document.querySelector(".products")
             );
 
-        function pop(){
+        function pop(event){
+            event.preventDefault();
             ReactDOM.render(
             <App posts={popular} />,
             document.querySelector(".products")
             );
         }
-        function getNew(){
+        function getNew(event){
+            event.preventDefault();
             ReactDOM.render(
             <App posts={data} />,
             document.querySelector(".products")

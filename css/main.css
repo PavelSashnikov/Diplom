@@ -92,7 +92,6 @@ header .top nav ul li {
 header .cart {
     float: right;
     line-height: 36px;
-    /* margin-right: 20px; */
 }
 header .cart.icon::before {
   content:'\f07a';

@@ -23,9 +23,9 @@
                 <nav class="icon">
                         <div class="icon"></div>
                     <ul>
-                        <li><a href="#">Доставка</a></li>
-                        <li><a href="#">Оплата</a></li>
-                        <li><a href="#">О компании</a></li>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="#delivery">Доставка и оплата</a></li>
+                        <li><a href="#about">О компании</a></li>
                         <li><a href="#">Контакты</a></li>
                         <li><a href="#">Каталог</a></li>
                     </ul>
@@ -75,7 +75,7 @@
                 </div>
             </div>
             <div class="advantages layout">
-                <p>Преимущества компании</p>
+                <h2>Преимущества компании</h2>
                 <div class="advantages__blocks">
                     <div class="delivery">
                         <img src="img/delivery.png" alt="delivery">
@@ -92,17 +92,28 @@
                 </div>
             </div>
             <div class="supplies layout">
-                <a href="" onClick="getNew(event)">Новинки</a>
+                <a href="" onClick="getNew(event)" style="color: rgb(252, 208, 65);">Новинки</a>
                 <a href="" onClick="pop(event)">Популярные товары</a>
                 <div class="supplies__blocks"></div>
             </div>
             <div class="products layout"></div>
-            <div class="about layout">
-                <p>Интернет-магазин электронных сигарет Vape Shop</p>
+            <div class="delivery layout" id="delivery">
+                <h2>Доставка и оплата</h2>
+                <p>Наш магазин осуществляет доставку по Минску и ближайшим городам:</p>
+                <ol>
+                    <li>Курьерская доставка по Минску - <span>3 руб.</span></li>
+                    <li>Почтовая доставка по РБ - <span>от 5 руб.</span>в зависимости от адреса.</li>
+                </ol>
+                <p>По Минску курьерская доставка осществляется в рабочие дни <span>c 10.00 до 22.00</span></p>
+                <P>Заказы, оформленные до 12.00 текущего дня, мы стараемся доставлять в этот же день.</P>
+                <p>Стоимость доставки по Минску составляет 3 рубля, оплата курьеру при получении заказа.</p>
+            </div>
+            <div class="about layout" id="about">
+                <h1>Интернет-магазин электронных сигарет Vape Shop</h1>
                 <div class="image">
                     <img src="img/about_main.JPG" alt="about">
                 </div>
-                <p>Добро пожаловать в магазин замечательных товаров!</p>
+                <h2>Добро пожаловать в магазин замечательных товаров!</h2>
                 <p>Мы с радостью принимаем и обслуживаем заказы <span>7 дней в неделю с 10 до 18</span>. Доставка возможна как по Минску, так и в областные города.</p>
                 <p>На сегодняшний день мы являемся одной из самых крупнейших компаний Беларуси в сфере оптово-розничных продаж электронных парогенераторов и комплектующих. Наша сеть объеденет <span>15 торговых точек по Минску и близлежащим городам</span></p>
             </div>
@@ -110,9 +121,9 @@
         <footer class="layout clearfix">
             <nav>
                 <ul>
-                    <li><a href="">Доставка</a></li>
-                    <li><a href="">Оплата</a></li>
-                    <li><a href="">О компании</a></li>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="">Доставка и оплата</a></li>
+                    <li><a href="#about">О компании</a></li>
                     <li><a href="">Контакты</a></li>
                     <li><a href="">Каталог</a></li>
                 </ul>
@@ -134,7 +145,7 @@
 
         function News(props) {
             return (
-                <div >
+                <div>
                     <img src={props.image}/>
                     <span>{props.price} руб</span>
                     <p>{props.title}</p>
@@ -208,6 +219,51 @@
             }
 
         ]
+        const supplies = [
+            {
+                id: 1,
+                title: 'Joytech eGo AIO 1500mAh Black-White',
+                image: 'img/ego_AIO.jpg',
+                price: 123,
+                good: 'sig'
+            },
+            {
+                id: 2,
+                title: 'Eleaf IJust S 3000mAh',
+                image: 'img/ijust.jpg',
+                price: 1700,
+                good: 'sig'
+            },
+            {           
+                id: 3,
+                title: 'SMOK Alien 220W AVP kit gun',
+                image: 'img/alien.jpg',
+                price: 2000,
+                good: 'sig'
+            },
+            {           
+                id: 4,
+                title: 'Eleaf iStick Pico',
+                image: 'img/eleaf istick Pico.jpeg',
+                price: 2500,
+                good: 'sig'
+            }
+            {           
+                id: 5,
+                title: 'Evod mt3 1100mAh',
+                image: 'img/Evod-mt3-1100mah-black.jpg',
+                price: 2020,
+                good: 'sig'
+            }
+            {
+                id: 6,
+                title: 'Жидкость old school tea fresh',
+                image: 'img/tea_time.jpg',
+                price: 234,
+                good: 'fluid'
+            }
+            
+        ]
 
         ReactDOM.render(
             <App posts={data} />,
@@ -228,6 +284,7 @@
             document.querySelector(".products")
             );
         }
+
     </script>
 </body>
 

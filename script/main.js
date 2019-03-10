@@ -36,12 +36,9 @@ $(function() {
         timeout: 1000 });
         });
 
-    $('.supplies a, nav a').on('click', function() {
+    $('.supplies a').on('click', function() {
         $(this).css('color', '#fcd041');
         $(this).siblings('a').removeAttr('style');
-        if($(this).parent('li')) {
-            $(this).parent('li').siblings('li').children('a').removeAttr('style');
-        }
     })
 
                 //height for images

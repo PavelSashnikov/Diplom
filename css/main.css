@@ -54,9 +54,10 @@ input {
     position: absolute;
     top: 32px;
     left: 0;
-    padding-right: 30px;
+    padding-right: 50px;
     border: none;
     background: #171717;
+    box-shadow: 0 0 10px black;
 }
 .dropdown > a::after {
     content: ' \f077';
@@ -85,7 +86,7 @@ header .top nav::before {
     content: '\f0c9';
     display: none;
 }
-header .top nav ul li {
+header .top nav ul li, footer nav ul li {
     display: inline;
     margin-right: 25px;
 }
@@ -148,7 +149,7 @@ header .seek button {
 li:hover ul,
 li:hover ul li {
     display: block;
-    z-index: 2;
+    z-index: 5;
 }
 li:hover a::after {
     transform: rotate(180deg);
@@ -178,7 +179,6 @@ li:hover a::after {
     margin-top: 48px;
 }
 .advantages__blocks {
-    border-top: 2px solid #fff;
     text-align: center;
     display: flex;
     justify-content: space-around;
@@ -234,7 +234,7 @@ li:hover a::after {
     margin-top: 20px;
     width: 100%;
 }
-.about p:first-of-type {
+h2, h1 {
     font-size: 25px;
     margin-top: 48px;
     border-bottom: 2px solid #fff;
@@ -246,10 +246,10 @@ li:hover a::after {
     overflow: hidden;
     margin-bottom: 50px;
 }
-.about p {
+.about p, .delivery p {
     margin-bottom: 15px;
 }
-.about p span {
+.about p span, .delivery p span, .delivery li span {
     color: #fcd041;
 }
 /*
@@ -259,11 +259,11 @@ li:hover a::after {
 */
 footer {
     background-color: #101010;
-    padding-bottom: 50px;
+    padding-bottom: 10px;
 }
 footer nav {
     float: left;
-    line-height: 2rem;
+    margin-top: 10px;
 }
 footer .contacts {
     float: right;
@@ -273,7 +273,7 @@ footer .contacts {
 *                   MEDIA
 *
 */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 820px) {
     header .top nav div::before {
         content: '\f0c9';
     }
@@ -304,6 +304,10 @@ footer .contacts {
     }
     .product span {
         bottom: 5rem;
+    }
+    footer nav ul li{
+        display: block;
+        line-height: 1.5rem;
     }
 
 }

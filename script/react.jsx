@@ -1,73 +1,96 @@
-class Specific extends React.Component {      //Классовый компонент
-    constructor(props) {
-      super(props);
-      this.state={price:this.props.price};
-    }
-    updatePrice = () =>{
-      this.setState({
-       price: this.state.price + 5
-      });
-    }
-    render () {
-      return (
-            <div>
-            <ul className="list">
-                <li>Цвет: {this.props.color}</li>
-                <li>Цена: <b>{this.state.price}</b> $</li>
-                {this.state.price>50 && <li>Много денег</li>}
-            </ul>
-            <div><button className="button" onClick={this.updatePrice}>Поднять цену</button></div>
-            </div>
-        )
-    }
-  }
+function News(props) {
+  return (
+      <div >
+          <img src={props.image}/>
+          <span>{props.price} руб</span>
+          <p>{props.title}</p>
+      </div>
+  )
+}
 
+function App(props) {
+    const content = props.posts.map((post) =>
+      <div key={post.id} className="product">
+          <News  title={post.title} image={post.image} price={post.price} />
+      </div>
+    );
+    return (
+      <div>
+        {content}
+      </div>
+    );
+}
 
-  function Flowers(props) {
-      return (
-          <div >
-              <h1>{props.title}</h1>
-              <img src={props.imageUrl}/>
-              <p>{props.subtitle}</p>
-          </div>
-      )
-  }
-
-  function App(props) {
-        const content = props.posts.map((post) =>
-          <div key={post.id} className="container">
-              <Flowers  title={post.title}  subtitle={post.subtitle} imageUrl={post.imageUrl} />
-              <Specific color={post.color}  price={post.price} />
-          </div>
-        );
-        return (
-          <div>
-            {content}
-          </div>
-        );
-  }
-
-  const data = [
-    {
+const data = [
+  {
       id: 1,
-      title: 'Суккуленты',
-      subtitle: 'Растения, имеющие специальные ткани для запаса воды',
-      imageUrl: 'https://ae01.alicdn.com/kf/HTB1fulxm4WYBuNjy1zkq6xGGpXaQ/-.jpg_q50.jpg',
-      color: 'зеленый',
-      price: 10
-
-      },
-      {
+      title: 'Joytech eGo AIO 1500mAh Black-White',
+      image: 'img/ego_AIO.jpg',
+      price: 123
+  },
+  {
       id: 2,
-      title: 'Орхидеи',
-      subtitle: 'Крупнейшее семейство однодольных растений',
-      imageUrl: 'http://floria.by/image/cache/data/home%20flowers/orchidea/korolevskaya%20/korolevskij1-500x500.jpg',
-      color: 'белые',
-      price: 30
+      title: 'Жидкость milk cream green',
+      image: 'img/milk_cream_green.jpg',
+      price: 345
+  },
+  {
+      id: 3,
+      title: 'Жидкость mr. Blintz',
+      image: 'img/mr_blintz.jpg',
+      price: 678
+  },
+  {
+      id: 4,
+      title: 'Жидкость old school tea fresh',
+      image: 'img/tea_time.jpg',
+      price: 234
+  }
+];
+const popular = [
+  {
+      id: 1,
+      title: 'SMOK Alien 220W AVP kit gun',
+      image: 'img/alien.jpg',
+      price: 2000
+  },
+  {
+      id: 2,
+      title: 'Joytech eGo AIO 1500mAh Black-White',
+      image: 'img/ego_AIO.jpg',
+      price: 123
+  },
+  {
+      id: 3,
+      title: 'Eleaf IJust S 3000mAh',
+      image: 'img/ijust.jpg',
+      price: 1700
+  },
+  {
+      id: 4,
+      title: 'Жидкость old school tea fresh',
+      image: 'img/tea_time.jpg',
+      price: 234
+  }
 
-      }
-  ];
-  ReactDOM.render(
-    <App posts={data} />,
-    document.getElementById('root')
+]
+
+ReactDOM.render(
+  <App posts={data} />,
+  document.querySelector(".products")
   );
+
+function pop(event){
+  event.preventDefault();
+  ReactDOM.render(
+  <App posts={popular} />,
+  document.querySelector(".products")
+  );
+}
+function getNew(event){
+  event.preventDefault();
+  ReactDOM.render(
+  <App posts={data} />,
+  document.querySelector(".products")
+  );
+}

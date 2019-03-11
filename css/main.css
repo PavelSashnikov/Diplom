@@ -57,6 +57,7 @@ input {
     padding-right: 30px;
     border: none;
     background: #171717;
+    box-shadow: 0 0 5px black;
 }
 .dropdown > a::after {
     content: ' \f077';
@@ -148,7 +149,7 @@ header .seek button {
 li:hover ul,
 li:hover ul li {
     display: block;
-    z-index: 2;
+    z-index: 5;
 }
 li:hover a::after {
     transform: rotate(180deg);

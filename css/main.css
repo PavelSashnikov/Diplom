@@ -9,6 +9,13 @@ body{
     font-size: 18px;
     font-family: 'Cuprum', serif;
 }
+h2, h1 {
+    font-size: 25px;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    margin-top: 48px;
+}
 .wrapper {
     max-width: 1225px;
     margin: 0 auto;
@@ -179,7 +186,6 @@ li:hover a::after {
     margin-top: 48px;
 }
 .advantages__blocks {
-    border-top: 2px solid #fff;
     text-align: center;
     display: flex;
     justify-content: space-around;
@@ -235,22 +241,22 @@ li:hover a::after {
     margin-top: 20px;
     width: 100%;
 }
-.about p:first-of-type {
+/* .about p:first-of-type {
     font-size: 25px;
     margin-top: 48px;
     border-bottom: 2px solid #fff;
     padding-bottom: 10px;
-    margin-bottom: 15px;
-}
+    margin-bottom: 15px; 
+}*/
 .about .image {
     width: 100%;
     overflow: hidden;
     margin-bottom: 50px;
 }
-.about p {
+p {
     margin-bottom: 15px;
 }
-.about p span {
+p span, li span {
     color: #fcd041;
 }
 /*

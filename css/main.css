@@ -35,11 +35,6 @@ input {
     outline: none;
     color: #fff;
 }
-.clearfix:after {
-    display: table;
-    content: '';
-    clear: both;
-}
 .selected {
     color: #fcd041;
 }
@@ -82,12 +77,12 @@ input {
 */
 header .top{
     background-color: #101010;
+    display: flex;
+    justify-content: space-between;
 }
 header .top nav {
-    float: left;
     line-height: 36px;
     position: relative;
-    /* margin-left: 20px; */
 }
 header .top nav::before {
     content: '\f0c9';
@@ -98,7 +93,6 @@ header .top nav ul li {
     margin-right: 25px;
 }
 header .cart {
-    float: right;
     line-height: 36px;
 }
 header .cart.icon::before {
@@ -172,14 +166,10 @@ li:hover a::after {
     margin-top: 20px;
     overflow: hidden;
     height: 500px;
-    /* position: relative; */
 }
 .slider__inner img {
     width: 100%;
     height: 500px;
-    /* position: absolute;
-    left: 0;
-    top: 0; */
 }
 .advantages {
     font-size: 20px;
@@ -198,7 +188,6 @@ li:hover a::after {
 }
 .advantages__blocks img {
     max-width: 50px;
-    /* height: 50px; */
 }
 .advantages__blocks p {
     margin: 0 2%;
@@ -219,7 +208,6 @@ li:hover a::after {
 }
 .products>div{
     display: flex;
-    /* flex-wrap: wrap; */
     justify-content: space-between;
     text-align: center;
 }
@@ -241,13 +229,6 @@ li:hover a::after {
     margin-top: 20px;
     width: 100%;
 }
-/* .about p:first-of-type {
-    font-size: 25px;
-    margin-top: 48px;
-    border-bottom: 2px solid #fff;
-    padding-bottom: 10px;
-    margin-bottom: 15px; 
-}*/
 .about .image {
     width: 100%;
     overflow: hidden;
@@ -267,13 +248,13 @@ p span, li span {
 footer {
     background-color: #101010;
     padding-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
 }
 footer nav {
-    float: left;
     line-height: 2rem;
 }
 footer .contacts {
-    float: right;
 }
 /*
 *

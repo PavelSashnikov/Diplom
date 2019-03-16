@@ -115,6 +115,7 @@ header .icon.search::before {
 }
 .contacts p {
     margin-top: 16px;
+    margin-bottom: 0;
 }
 header .contacts p:first-of-type {
     margin-top: 0;

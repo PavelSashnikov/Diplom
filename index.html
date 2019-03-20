@@ -27,7 +27,7 @@
                         <li><a href="delivery.html">Доставка и оплата</a></li>
                         <li><a href="about.html">О компании</a></li>
                         <li><a href="contacts.html">Контакты</a></li>
-                        <li><a href="#">Каталог</a></li>
+                        <li><a href="" onClick="getCatalog(event)">Каталог</a></li>
                     </ul>
                 </nav>
                 <div class="cart icon">
@@ -35,7 +35,7 @@
                 </div>
             </div>
             <div class="main layout">
-                <img src="img/logo.jpg" alt="logo">
+                <a href="index.html"><img src="img/logo.jpg" alt="logo"></a>
                 <div class="contacts">
                     <p class="icon phone">
                         +375 (29) 123-45-67
@@ -45,15 +45,15 @@
                     </p>
                 </div>
                 <div class="seek">
-                    <input type="text" placeholder="Поиск">
+                    <input type="text" placeholder="Поиск по каталогу">
                     <button class="icon search"></button>
                 </div>
             </div>
             <div class="menu layout">
                 <nav>
                     <ul>
-                        <li><a href="#">Электронные сигареты</a></li>
-                        <li><a href="#">Жидкости</a></li>
+                        <li><a href="#" onClick="showSigs(event, 'sig')">Электронные сигареты</a></li>
+                        <li><a href="#" onClick="showSigs(event, 'fl')">Жидкости</a></li>
                         <li class="dropdown">
                             <a href="#">Комплектующие</a>
                             <ul class="hidden inner">

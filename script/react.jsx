@@ -146,7 +146,7 @@ function getCatalog(event){
   event.preventDefault();
   ReactDOM.render(
     <div className="products">
-      <h2 className='layout'>Католог товаров</h2>
+      <h2 className='layout'>Каталог товаров</h2>
       <App posts={catalog} />
     </div>,
     document.querySelector("section")
@@ -173,6 +173,32 @@ function showSigs(event, pur){
       <img src="./img/info_3.jpg" />
       <div>
         {products}
+      </div>
+    </div>,
+    document.querySelector("section")
+  );
+}
+
+function search(event) {
+  event.preventDefault();
+  const items = [];
+  var search = document.querySelector("input").value;
+  catalog.forEach(x => {
+    if(x.title.match(search)) {
+      const item = (
+        <div key={x.id} className="product">
+        <News  title={x.title} image={x.image} price={x.price} />
+        </div>
+      );
+
+      items.push(item);
+    }
+  });
+  ReactDOM.render(
+    <div className="products">
+      <h2>Результаты поиска</h2>
+      <div>
+        {items}
       </div>
     </div>,
     document.querySelector("section")
